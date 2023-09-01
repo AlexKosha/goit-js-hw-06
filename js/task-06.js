@@ -4,7 +4,7 @@ validationEl.addEventListener("blur", onInputValidation);
 
 function onInputValidation(event) {
   const requiredLength = Number(validationEl.getAttribute("data-length"));
-  const inputValue = event.currentTarget.value;
+  const inputValue = event.currentTarget.value.trim();
   if (inputValue.length === requiredLength) {
     validationEl.classList.add("valid");
     validationEl.classList.remove("invalid");
